@@ -1,0 +1,46 @@
+/* style.css */
+
+/* Font & Dasar */
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+}
+
+/* Background Hero */
+.hero-gradient {
+    background: radial-gradient(circle at top right, #eff6ff 0%, #ffffff 100%);
+}
+
+/* Navigasi Transparan */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Animasi Gambar Melayang */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+.animate-float { 
+    animation: float 6s ease-in-out infinite; 
+}
+
+/* --- LOGIKA MENU MOBILE (RUNDOWN) --- */
+
+#mobile-menu {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 0; /* Awalnya tertutup */
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+}
+
+/* Class ini akan dipicu oleh JavaScript */
+#mobile-menu.open {
+    max-height: 500px; /* Nilai ini harus cukup untuk menampung isi menu */
+    opacity: 1;
+    transform: translateY(0);
+    padding: 1rem;
+}
