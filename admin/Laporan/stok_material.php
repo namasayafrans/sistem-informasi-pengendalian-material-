@@ -1,6 +1,7 @@
 <?php
-// Koneksi manual karena lu gak pake file koneksi.php
-$conn = mysqli_connect("localhost", "root", "", "batarasura_db");
+
+require '../config/config.php';
+
 
 $query_stok = "SELECT 
                 m.nama_material, m.no_part, m.satuan,

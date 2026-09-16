@@ -37,10 +37,10 @@ switch($page) {
 
     // --- D. LAPORAN (Perbaikan di Sini) ---
     case 'laporan-stok':
-        include 'laporan/stok_material.php';
+		include 'laporan/stok_material.php';
         break;
     case 'laporan-produksi':
-        include 'laporan/produksi.php';
+       include 'laporan/produksi.php';
         break;
 
     // --- DEFAULT (OVERVIEW) ---

@@ -43,7 +43,7 @@ $result_mat = mysqli_query($conn, $query_mat);
                     <td class="p-6 font-bold text-slate-700 uppercase text-xs"><?= $row['material_size'] ?></td>
                     
                     <td class="p-6 text-slate-700 font-mono text-right font-bold">
-                        <?= number_format($row['standard'], 2, ',', '.') ?>
+                        <?= number_format((float)$row['standard'], 2, ',', '.') ?>
                     </td>
                     <td class="p-6">
                         <span class="bg-slate-100 px-2 py-1 rounded text-[12px] font-black lowercase text-slate-500"><?= $row['satuan'] ?></span>

@@ -1,5 +1,6 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "batarasura_db");
+require '../config/config.php';
+
 
 // Ambil total seluruh produksi dan total material keluar untuk menghitung rata-rata pemakaian
 $q_total = mysqli_query($conn, "SELECT 

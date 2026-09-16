@@ -1,9 +1,18 @@
-<?php
-session_start();
-// Pastikan koneksi database tersedia untuk semua sub-page
-$conn = mysqli_connect("localhost", "root", "", "batarasura_db");
 
-// Menentukan halaman aktif
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+session_start();
+require '../config/config.php';
+
+if (!isset($_SESSION['id'])) {
+    header("Location: ../login/login.php");
+    exit;
+}
+
 $page = isset($_GET['page']) ? $_GET['page'] : 'overview';
 ?>
 

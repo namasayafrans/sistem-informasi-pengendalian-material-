@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
     $delete = mysqli_query($conn, "DELETE FROM data_material WHERE id = '$id'");
 
     if ($delete) {
-        echo "<script>alert('Data Material Berhasil Dihapus!'); window.location='?page=data-material';</script>";
+        echo "<script>alert('Data Material Berhasil Dihapus!'); window.location='?page=daftar-material';</script>";
     }
 }
 ?>

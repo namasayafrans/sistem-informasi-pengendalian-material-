@@ -24,7 +24,7 @@ if (isset($_POST['update_data'])) {
                 WHERE id = '$id'");
     
     if($update) {
-        echo "<script>alert('Perubahan Berhasil Disimpan!'); window.location='?page=data-material';</script>";
+        echo "<script>alert('Perubahan Berhasil Disimpan!'); window.location='?page=daftar-material';</script>";
     } else {
         echo "<script>alert('Gagal Update: " . mysqli_error($conn) . "');</script>";
     }

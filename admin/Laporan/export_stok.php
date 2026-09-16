@@ -1,5 +1,6 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "batarasura_db");
+require '../../config/config.php';
+
 ob_start();
 header("Content-Type: application/vnd.ms-excel");
 header("Content-Disposition: attachment; filename=Laporan_Stok_Material.xls");

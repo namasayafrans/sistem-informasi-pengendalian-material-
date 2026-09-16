@@ -11,7 +11,7 @@ if (isset($_POST['simpan_data'])) {
               VALUES ('$nama', '$part', '$spec', '$size', '$std', '$satuan')";
     
     if (mysqli_query($conn, $query)) {
-        echo "<script>alert('Data Berhasil Disimpan!'); window.location='?page=data-material';</script>";
+        echo "<script>alert('Data Berhasil Disimpan!'); window.location='?page=daftar-material';</script>";
     }
 }
 ?>

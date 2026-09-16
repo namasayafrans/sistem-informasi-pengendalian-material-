@@ -1,11 +1,15 @@
 <?php
 session_start();
-// Koneksi database
-$conn = mysqli_connect("localhost", "root", "", "batarasura_db");
+require '../config/config.php';
 
-// Menentukan halaman aktif
+if (!isset($_SESSION['id'])) {
+    header("Location: ../login/login.php");
+    exit;
+}
+
 $page = isset($_GET['page']) ? $_GET['page'] : 'overview';
 ?>
+
 
 <!DOCTYPE html>
 <html lang="id">
